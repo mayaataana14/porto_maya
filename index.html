@@ -2511,7 +2511,7 @@
             <span>Lihat Portofolio</span>
           </a>
 
-          <button type="button" class="hero-pill-btn hero-btn-secondary" onclick="openCvAtsModal()" title="Buka Curriculum Vitae Standar ATS">
+          <button type="button" class="hero-pill-btn hero-btn-secondary" id="btnHeroCvAts" onclick="openCvAtsModal()" title="Buka Curriculum Vitae Standar ATS">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
               <polyline points="14 2 14 8 20 8"></polyline>
@@ -3935,8 +3935,25 @@
           <section>
             <h2 class="cv-ats-sec-title">Ringkasan Profesional</h2>
             <p class="cv-ats-summary-text">
-              Lulusan S1 Psikologi Universitas Negeri Padang (IPK 3.51) dengan pengalaman solid dalam bidang administrasi kepegawaian (HR), pengelolaan data dan dokumen, pelayanan informasi (customer service), serta tata kelola persuratan kedinasan. Terbiasa melakukan data entry pada sistem internal, pengarsipan berkas sistematis, penyusunan laporan Penelitian Kemasyarakatan (Litmas), rekapitulasi absensi pegawai, dan pengelolaan jadwal dinas. Terampil mengoperasikan Microsoft Office (Word, PowerPoint, Excel Advanced: Pivot Table, VLOOKUP, HLOOKUP) serta Google Workspace, didukung kemampuan komunikasi interpersonal yang persuasif, koordinasi lintas tim, ketelitian tinggi, problem solving, dan etika kerahasiaan berkas klien.
+              Lulusan S1 Psikologi Universitas Negeri Padang (IPK 3.51) dengan pengalaman dalam administrasi kepegawaian (HR), pengelolaan data dan dokumen, pelayanan informasi (customer service), serta asesmen psikologi. Terbiasa mengelola persuratan kedinasan, rekapitulasi data menggunakan Microsoft Excel (Pivot Table, VLOOKUP/HLOOKUP), penyusunan laporan, serta komunikasi lintas pihak dengan ketelitian tinggi dan integritas kerahasiaan data.
             </p>
+          </section>
+
+          <!-- KEAHLIAN UTAMA -->
+          <section>
+            <h2 class="cv-ats-sec-title">Keahlian Utama</h2>
+            <div class="cv-ats-skill-group">
+              <strong>Administrasi & HR:</strong> Administrasi Kepegawaian, Rekapitulasi Absensi, Penjadwalan Tugas & Dinas, Pengelolaan Surat Masuk/Keluar, Data Entry & Validasi Database, Pengarsipan Dokumen Sistematis, Customer Service, Administrasi & Skoring Tes Psikologi.
+            </div>
+            <div class="cv-ats-skill-group">
+              <strong>Software & Digital Tools:</strong> Microsoft Excel (Pivot Table, VLOOKUP, HLOOKUP, Data Validation), Microsoft Word, PowerPoint, Google Workspace (Docs, Sheets, Drive), Canva, SPSS.
+            </div>
+            <div class="cv-ats-skill-group">
+              <strong>Penguasaan Bahasa:</strong> Bahasa Indonesia (Native / Fasih Tata Bahasa Kedinasan), Bahasa Inggris (Professional Working Proficiency).
+            </div>
+            <div class="cv-ats-skill-group">
+              <strong>Kompetensi Interpersonal:</strong> Komunikasi Interpersonal, Ketelitian Tinggi, Manajemen Waktu, Problem Solving, Pelayanan Prima, Etika Kerahasiaan Data Klien.
+            </div>
           </section>
 
           <!-- PENGALAMAN KERJA & MAGANG -->
@@ -3954,12 +3971,12 @@
                 <span class="cv-ats-loc">Padang, Indonesia</span>
               </div>
               <ul class="cv-ats-list">
-                <li><strong>Administrasi Kepegawaian (HR):</strong> Mengelola administrasi dan arsip data kepegawaian staf secara sistematis, termasuk verifikasi kelengkapan dokumen kedinasan dan pembaruan database rutin.</li>
-                <li><strong>Surat-Menyurat & Jadwal Dinas:</strong> Menyiapkan surat promosi dan surat tugas pegawai sesuai format kedinasan resmi; menerima, menginput, merekap, dan mendistribusikan jadwal dinas pegawai kepada pihak terkait.</li>
-                <li><strong>Database & Administrasi Klien:</strong> Melakukan data entry, monitoring, validasi, dan rekapitulasi database klien pada sistem internal pemasyarakatan.</li>
-                <li><strong>Penyusunan Laporan Litmas:</strong> Menyusun 1–3 laporan Penelitian Kemasyarakatan (Litmas) per minggu secara akurat dan komprehensif melalui wawancara mendalam, observasi, dan analisis data latar belakang klien.</li>
-                <li><strong>Customer Service & Pendampingan:</strong> Memberikan pelayanan informasi ramah, komunikasi, follow-up, serta pendampingan prosedur layanan kepada klien, keluarga/penjamin, dan tamu dinas.</li>
-                <li><strong>Co-Coordinator Tim Humas & Onboarding:</strong> Berperan sebagai Co-Coordinator Humas dalam perencanaan konten publikasi media instansi, serta memandu proses serah terima tugas dan prosedur operasional bagi pegawai baru.</li>
+                <li>Mengelola administrasi dan arsip kepegawaian staf secara sistematis serta memverifikasi kelengkapan dokumen kedinasan.</li>
+                <li>Menyiapkan surat promosi, surat tugas, serta merekap dan mendistribusikan jadwal dinas pegawai.</li>
+                <li>Melakukan data entry dan validasi database klien pada sistem internal pemasyarakatan.</li>
+                <li>Menyusun 1–3 laporan Penelitian Kemasyarakatan (Litmas) per minggu berbasis wawancara mendalam dan verifikasi data.</li>
+                <li>Memberikan layanan informasi (customer service) yang ramah dan solutif kepada klien, keluarga, dan tamu dinas.</li>
+                <li>Berperan sebagai Co-Coordinator Humas dalam perencanaan konten publikasi kedinasan.</li>
               </ul>
             </div>
 
@@ -3974,11 +3991,9 @@
                 <span class="cv-ats-loc">Padang, Indonesia</span>
               </div>
               <ul class="cv-ats-list">
-                <li><strong>Konseling Dasar & Terapi Dasar:</strong> Melakukan sesi konseling dasar dan pendampingan terapi dasar kepada klien sesuai protokol asesmen di bawah supervisi psikolog.</li>
-                <li><strong>Administrasi Asesmen Psikologi:</strong> Mendukung administrasi proses asesmen psikologi melalui pengelolaan dokumen, pencatatan, observasi, dan dokumentasi 7–10 klien per minggu.</li>
-                <li><strong>Pelaksanaan & Skoring Tes:</strong> Melaksanakan instruksi, pengawasan, dan skoring manual alat tes psikologi terstandar sesuai SOP di bawah supervisi psikolog.</li>
-                <li><strong>Penjadwalan & Wawancara:</strong> Mengatur jadwal sesi wawancara klien, menyiapkan berkas asesmen, dan mencatat rangkuman hasil observasi perilaku.</li>
-                <li><strong>Kerahasiaan Dokumen Klien:</strong> Mengelola arsip berkas psikotes dan data klien secara sistematis dengan menjunjung tinggi kode etik kerahasiaan data psikologi.</li>
+                <li>Melakukan konseling dasar dan pendampingan terapi dasar kepada klien di bawah supervisi psikolog.</li>
+                <li>Mendukung administrasi asesmen psikologi (pencatatan berkas, observasi, dan penjadwalan) untuk 7–10 klien per minggu.</li>
+                <li>Melaksanakan instruksi, pengawasan, dan skoring manual alat tes psikologi terstandar dengan menjaga etika kerahasiaan berkas.</li>
               </ul>
             </div>
 
@@ -3993,9 +4008,9 @@
                 <span class="cv-ats-loc">Padang, Indonesia</span>
               </div>
               <ul class="cv-ats-list">
-                <li><strong>Penilaian Kinerja SDM Guru:</strong> Mendukung administrasi penilaian kinerja tenaga pendidik melalui pengisian, rekapitulasi, dan pengolahan data instrumen evaluasi di bawah supervisi Kepala Sekolah.</li>
-                <li><strong>Tata Kelola Dokumen & PPDB:</strong> Menangani pengarsipan surat dinas masuk/keluar serta menyusun laporan review guru terkait pelaksanaan Penerimaan Peserta Didik Baru (PPDB).</li>
-                <li><strong>Creative Support Canva & Desain Visi Misi:</strong> Merancang dan mendesain media visual visi & misi sekolah, menyusun materi pengenalan sekolah bagi wali murid & siswa baru, serta mendesain brosur promosi dan poster publikasi digital.</li>
+                <li>Mendukung administrasi penilaian kinerja guru melalui rekapitulasi dan pengolahan data instrumen evaluasi.</li>
+                <li>Mengelola arsip surat masuk/keluar serta menyusun laporan review terkait Penerimaan Peserta Didik Baru (PPDB).</li>
+                <li>Mendesain media visual visi & misi sekolah, materi orientasi siswa baru/wali murid, serta materi promosi di Canva.</li>
               </ul>
             </div>
 
@@ -4010,10 +4025,8 @@
                 <span class="cv-ats-loc">Padang, Indonesia</span>
               </div>
               <ul class="cv-ats-list">
-                <li><strong>Kepegawaian & Rekap Absensi:</strong> Mendukung administrasi kepegawaian melalui pengelolaan arsip fisik dokumen serta menyusun dan merekap presensi absensi peserta magang.</li>
-                <li><strong>Surat Masuk & Keluar Dinas:</strong> Melakukan registrasi buku agenda persuratan dinas, mendistribusikan lembar disposisi pimpinan, dan mengarsipkan surat secara kronologis.</li>
-                <li><strong>Customer Service Meja Informasi:</strong> Menerima tamu kedinasan, memberikan pelayanan informasi terarah dengan ramah, dan memandu alur kebutuhan administrasi.</li>
-                <li><strong>Registrasi Data Klien:</strong> Melakukan pencatatan dan registrasi berkas data klien melalui sistem internal instansi.</li>
+                <li>Mengelola registrasi agenda persuratan dinas (surat masuk/keluar) dan distribusi lembar disposisi pimpinan.</li>
+                <li>Merekap presensi absensi peserta magang serta memberikan pelayanan informasi terarah di meja layanan tamu.</li>
               </ul>
             </div>
           </section>
@@ -4031,15 +4044,25 @@
                 <span class="cv-ats-loc">Padang, Indonesia</span>
               </div>
               <ul class="cv-ats-list">
-                <li><strong>Publikasi Ilmiah SINTA 5:</strong> Penulis Utama artikel ilmiah empiris pada <em>Jurnal Riset Psikologi (JRP) UNP</em>: "Hubungan Kecanduan Game Online (Mobile Legends: Bang Bang) dengan Agresi Verbal pada Mahasiswa" (Terakreditasi Nasional SINTA 5).</li>
-                <li><strong>Relevansi Bidang:</strong> Psikologi Industri & Organisasi (PIO), Administrasi Asesmen SDM, Skoring Tes Psikologi, Analisis Data Kuantitatif & Korelasi (SPSS), Kode Etik Kerahasiaan Dokumen.</li>
+                <li><strong>Publikasi Ilmiah SINTA 5:</strong> Penulis Utama artikel ilmiah pada <em>Jurnal Riset Psikologi (JRP) UNP</em>: "Hubungan Kecanduan Game Online (Mobile Legends: Bang Bang) dengan Agresi Verbal pada Mahasiswa".</li>
               </ul>
             </div>
           </section>
 
-          <!-- PENGALAMAN KEPANITIAAN & ORGANISASI -->
+          <!-- PENGALAMAN KEPANITIAAN & PENGABDIAN -->
           <section>
-            <h2 class="cv-ats-sec-title">Pengalaman Kepanitiaan & Organisasi</h2>
+            <h2 class="cv-ats-sec-title">Pengalaman Kepanitiaan & Pengabdian</h2>
+
+            <div class="cv-ats-entry">
+              <div class="cv-ats-entry-header">
+                <span class="cv-ats-role">Kuliah Kerja Nyata (KKN) - Divisi Kesehatan & Edukasi</span>
+                <span class="cv-ats-period">Universitas Negeri Padang</span>
+              </div>
+              <ul class="cv-ats-list">
+                <li>Mengelola ketersediaan obat-obatan peserta KKN, memberikan dukungan awal kesehatan mental (teman curhat), dan membuka forum keluh kesah personal bagi peserta dan anak-anak sekitar posko.</li>
+                <li>Menyelenggarakan psikoedukasi anti-bullying kepada 45–60 siswa SD dan pendampingan di Sekolah Luar Biasa (SLB).</li>
+              </ul>
+            </div>
 
             <div class="cv-ats-entry">
               <div class="cv-ats-entry-header">
@@ -4047,7 +4070,7 @@
                 <span class="cv-ats-period">Fakultas Psikologi UNP</span>
               </div>
               <ul class="cv-ats-list">
-                <li>Menyusun proposal kegiatan & penawaran sponsorship, menjalin komunikasi dan negosiasi mitra sponsor pendanaan event, mengelola alur persuratan resmi, serta bertindak sebagai Contact Person (CP) utama peserta.</li>
+                <li>Menyusun proposal sponsorship, menjalin komunikasi mitra sponsor pendanaan event, dan mengelola alur persuratan resmi.</li>
               </ul>
             </div>
 
@@ -4057,46 +4080,8 @@
                 <span class="cv-ats-period">Universitas Negeri Padang</span>
               </div>
               <ul class="cv-ats-list">
-                <li>Mengelola administrasi kesekretariatan project dari persiapan hingga kampanye, menyusun jadwal pertemuan, notulensi rapat berkala, serta menyusun Laporan Pertanggungjawaban (LPJ) akhir kegiatan.</li>
+                <li>Mengelola administrasi kesekretariatan, notulensi rapat berkala, jadwal tim, dan penyusunan Laporan Pertanggungjawaban (LPJ).</li>
               </ul>
-            </div>
-
-            <div class="cv-ats-entry">
-              <div class="cv-ats-entry-header">
-                <span class="cv-ats-role">Divisi Perlengkapan — Launching Gameboard Psikologi Forensik</span>
-                <span class="cv-ats-period">Fakultas Psikologi UNP</span>
-              </div>
-              <ul class="cv-ats-list">
-                <li>Mengelola inventarisasi logistik, pengadaan & koordinasi percetakan material fisik boardgame forensik, instalasi tata ruang venue display pameran, serta kontrol akuntabilitas aset.</li>
-              </ul>
-            </div>
-
-            <div class="cv-ats-entry">
-              <div class="cv-ats-entry-header">
-                <span class="cv-ats-role">Kuliah Kerja Nyata (KKN) - Divisi Kesehatan & Edukasi</span>
-                <span class="cv-ats-period">Universitas Negeri Padang</span>
-              </div>
-              <ul class="cv-ats-list">
-                <li>Bertugas di Divisi Kesehatan: mengelola kebutuhan obat-obatan peserta KKN, memberikan dukungan awal kesehatan mental (teman curhat), dan membuka forum keluh kesah personal bagi peserta maupun anak-anak di sekitar posko.</li>
-                <li>Memberikan psikoedukasi anti-bullying kepada 45–60 siswa SD serta mendampingi stimulasi motorik siswa berkebutuhan khusus di Sekolah Luar Biasa (SLB).</li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- KEAHLIAN & KETERAMPILAN -->
-          <section>
-            <h2 class="cv-ats-sec-title">Keahlian & Keterampilan</h2>
-            <div class="cv-ats-skill-group">
-              <strong>Keahlian Administrasi & HR:</strong> Administrasi Kepegawaian, Rekapitulasi Absensi, Penjadwalan Tugas & Dinas, Pengelolaan Surat Masuk/Keluar, Data Entry & Monitoring, Pengarsipan Dokumen Sistematis, Customer Service Support, Administrasi Asesmen & Skoring Psikotes, Penyusunan Laporan Litmas.
-            </div>
-            <div class="cv-ats-skill-group">
-              <strong>Software & Digital Tools:</strong> Microsoft Excel (Pivot Table, VLOOKUP, HLOOKUP, IF, Conditional Formatting, Data Validation), Microsoft Word, Microsoft PowerPoint, Google Workspace (Docs, Sheets, Drive), Canva, CapCut.
-            </div>
-            <div class="cv-ats-skill-group">
-              <strong>Kompetensi Interpersonal:</strong> Komunikasi Interpersonal, Ketelitian & Akurasi Data, Manajemen Waktu, Pemecahan Masalah (Problem Solving), Kerja Sama Tim, Berpikir Analitis, Pelayanan Prima.
-            </div>
-            <div class="cv-ats-skill-group">
-              <strong>Penguasaan Bahasa:</strong> Bahasa Indonesia (Native / Aktif & Sangat Fasih Tata Bahasa Kedinasan), Bahasa Inggris (Professional Working Proficiency / Komunikasi & Korespondensi Bisnis).
             </div>
           </section>
 
@@ -4106,7 +4091,7 @@
             <ul class="cv-ats-list">
               <li><strong>Sertifikat MagangHub Kemnaker:</strong> Program Magang Nasional Balai Pemasyarakatan — Predikat: <em>Sangat Baik</em>.</li>
               <li><strong>GNIK / MagangHub — 12+ Essential Skills:</strong> Desain Berpikir (Design Thinking) — Nilai Sempurna: <em>100/100</em>.</li>
-              <li><strong>Sertifikat Humas "Content Creator":</strong> Balai Pemasyarakatan — Pengembangan Konten Informasi & Media Publikasi Kedinasan.</li>
+              <li><strong>Sertifikat Humas "Content Creator":</strong> Balai Pemasyarakatan — Pengembangan Konten Media Publikasi Kedinasan.</li>
               <li><strong>Psychological First Aid (PFA):</strong> Pelatihan Dasar Penanganan Krisis Psikologis & Pendampingan Konseling Dasar.</li>
             </ul>
           </section>
