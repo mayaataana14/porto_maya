@@ -1122,6 +1122,482 @@
     }
 
     /* ==========================================================================
+       BAPAS DOCUMENTATION PHOTOS & LIGHTBOX STYLES
+       ========================================================================== */
+    .exp-thumb-photo-cover {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .exp-thumb-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .exp-card-modern:hover .exp-thumb-bg-img {
+      transform: scale(1.08);
+    }
+
+    .exp-thumb-gradient-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(13, 38, 32, 0.42) 0%, rgba(13, 38, 32, 0.85) 100%);
+      z-index: 1;
+      transition: background 0.3s ease;
+    }
+
+    .exp-card-modern:hover .exp-thumb-gradient-overlay {
+      background: linear-gradient(180deg, rgba(13, 38, 32, 0.32) 0%, rgba(13, 38, 32, 0.75) 100%);
+    }
+
+    .exp-thumb-photos-tag {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(13, 38, 32, 0.88);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      backdrop-filter: blur(6px);
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+    }
+
+    .exp-card-preview-gallery {
+      background: var(--bg-canvas);
+      border: 1px dashed var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 10px 12px;
+      margin-bottom: 16px;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .exp-card-modern:hover .exp-card-preview-gallery {
+      border-color: var(--color-primary);
+      background: var(--color-primary-soft);
+    }
+
+    .exp-preview-gallery-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .exp-preview-gallery-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .exp-preview-click-hint {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .exp-preview-thumbnails {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .exp-mini-thumb {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 16 / 11;
+      border: 1px solid var(--border-subtle);
+      background: #e2e8f0;
+    }
+
+    .exp-mini-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .exp-card-modern:hover .exp-mini-thumb img {
+      transform: scale(1.08);
+    }
+
+    /* BAPAS Modal Gallery Section */
+    .exp-detail-modal-box-wide {
+      max-width: 820px !important;
+    }
+
+    .exp-modal-top-badges {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .exp-modal-badge-photo {
+      background: #0284c7 !important;
+      color: #ffffff !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .bapas-gallery-section {
+      background: linear-gradient(180deg, var(--bg-canvas) 0%, rgba(232, 244, 240, 0.4) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      margin: 24px 0;
+    }
+
+    .bapas-gallery-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .bapas-gallery-subtitle {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .bapas-gallery-counter-badge {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-medium);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      white-space: nowrap;
+    }
+
+    .bapas-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 640px) {
+      .bapas-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .bapas-gallery-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .bapas-gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-primary);
+    }
+
+    .bapas-item-media {
+      position: relative;
+      width: 100%;
+      height: 190px;
+      background: #e2e8f0;
+      overflow: hidden;
+    }
+
+    .bapas-item-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .bapas-gallery-item:hover .bapas-item-media img {
+      transform: scale(1.06);
+    }
+
+    .bapas-item-hover {
+      position: absolute;
+      inset: 0;
+      background: rgba(13, 38, 32, 0.42);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .bapas-gallery-item:hover .bapas-item-hover {
+      opacity: 1;
+    }
+
+    .bapas-zoom-btn {
+      background: #ffffff;
+      color: var(--color-primary-dark);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 7px 14px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transform: translateY(6px);
+      transition: transform 0.2s ease;
+    }
+
+    .bapas-gallery-item:hover .bapas-zoom-btn {
+      transform: translateY(0);
+    }
+
+    .bapas-item-info {
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex-grow: 1;
+    }
+
+    .bapas-item-pill {
+      align-self: flex-start;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      background: var(--color-primary-soft);
+      padding: 3px 9px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .bapas-item-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.35;
+    }
+
+    .bapas-item-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    /* Lightbox Modal Styles */
+    .bapas-lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 15, 23, 0.92);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.25s ease;
+      padding: 20px;
+    }
+
+    .bapas-lightbox-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .bapas-lightbox-dialog {
+      position: relative;
+      background: #0f1c18;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 900px;
+      max-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+      transform: scale(0.95);
+      transition: transform 0.25s ease;
+    }
+
+    .bapas-lightbox-overlay.open .bapas-lightbox-dialog {
+      transform: scale(1);
+    }
+
+    .bapas-lightbox-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .bapas-lightbox-close:hover {
+      background: rgba(255, 255, 255, 0.35);
+      transform: scale(1.08);
+    }
+
+    .bapas-lightbox-arrow {
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(13, 38, 32, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .bapas-lightbox-arrow:hover {
+      background: var(--color-primary);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .bapas-lightbox-arrow.prev {
+      left: 14px;
+    }
+
+    .bapas-lightbox-arrow.next {
+      right: 14px;
+    }
+
+    .bapas-lightbox-body {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      max-height: 92vh;
+    }
+
+    .bapas-lightbox-media-wrapper {
+      background: #070d0b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 280px;
+      max-height: 62vh;
+      overflow: hidden;
+      padding: 12px;
+    }
+
+    .bapas-lightbox-media-wrapper img {
+      max-width: 100%;
+      max-height: 60vh;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .bapas-lightbox-caption-bar {
+      padding: 20px 28px;
+      background: #11221e;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+
+    .bapas-lightbox-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .bapas-lightbox-tag {
+      font-size: 0.74rem;
+      font-weight: 700;
+      background: #14493c;
+      color: #6ee7b7;
+      padding: 3px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .bapas-lightbox-count {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 600;
+    }
+
+    .bapas-lightbox-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 6px 0;
+      line-height: 1.35;
+    }
+
+    .bapas-lightbox-desc {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .bapas-lightbox-arrow {
+        width: 36px;
+        height: 36px;
+      }
+      .bapas-lightbox-arrow.prev { left: 8px; }
+      .bapas-lightbox-arrow.next { right: 8px; }
+      .bapas-lightbox-caption-bar {
+        padding: 14px 16px;
+      }
+      .bapas-lightbox-title {
+        font-size: 1rem;
+      }
+      .bapas-lightbox-desc {
+        font-size: 0.8rem;
+      }
+    }
+
+    /* ==========================================================================
        CV ATS-FRIENDLY MODAL & DOCUMENT STYLES
        ========================================================================== */
     .cv-ats-modal-overlay {
@@ -2712,15 +3188,20 @@
         <div class="exp-grid">
           <!-- Card 1: BAPAS MagangHub -->
           <div class="exp-card-modern" onclick="openExpModal('modal-exp-1')">
-            <div class="exp-card-thumb exp-thumb-bg-1">
-              <div class="exp-thumb-pattern"></div>
+            <div class="exp-card-thumb exp-thumb-photo-cover">
+              <img src="assets/bapas/bapas-administrasi-tim.jpg" alt="MagangHub BAPAS Kelas I Padang" class="exp-thumb-bg-img" loading="lazy">
+              <div class="exp-thumb-gradient-overlay"></div>
               <span class="exp-thumb-badge">MagangHub PPK • 2025–2026</span>
+              <span class="exp-thumb-photos-tag">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                4 Dokumentasi
+              </span>
               <div class="exp-thumb-overlay-btn">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                   <circle cx="11" cy="11" r="8"></circle>
                   <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-                <span>Detail Pengalaman</span>
+                <span>Lihat Foto & Detail</span>
               </div>
             </div>
             <div class="exp-card-body">
@@ -2752,8 +3233,33 @@
                 </li>
               </ul>
 
+              <!-- Mini gallery preview inside card -->
+              <div class="exp-card-preview-gallery">
+                <div class="exp-preview-gallery-header">
+                  <span class="exp-preview-gallery-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    Dokumentasi Lapangan (4 Foto):
+                  </span>
+                  <span class="exp-preview-click-hint">Buka Galeri &rarr;</span>
+                </div>
+                <div class="exp-preview-thumbnails">
+                  <div class="exp-mini-thumb">
+                    <img src="assets/bapas/bapas-administrasi-tim.jpg" alt="Administrasi Tim Humas" loading="lazy">
+                  </div>
+                  <div class="exp-mini-thumb">
+                    <img src="assets/bapas/bapas-layanan-pemberkasan.jpg" alt="Pelayanan Berkas Klien" loading="lazy">
+                  </div>
+                  <div class="exp-mini-thumb">
+                    <img src="assets/bapas/bapas-wawancara-litmas.jpg" alt="Wawancara Litmas" loading="lazy">
+                  </div>
+                  <div class="exp-mini-thumb">
+                    <img src="assets/bapas/bapas-penyusunan-surat.png" alt="Penyusunan Surat Dinas" loading="lazy">
+                  </div>
+                </div>
+              </div>
+
               <div class="exp-card-footer">
-                <span>Lihat Rincian Tugas & Pencapaian Lengkap</span>
+                <span>Lihat 4 Foto Dokumentasi & Rincian Lengkap</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
@@ -2919,14 +3425,20 @@
 
         <!-- Modal 1: BAPAS MagangHub -->
         <div class="exp-detail-modal-overlay" id="modal-exp-1">
-          <div class="exp-detail-modal-box">
+          <div class="exp-detail-modal-box exp-detail-modal-box-wide">
             <button class="exp-modal-close-btn" onclick="closeExpModal('modal-exp-1')">&times;</button>
-            <span class="exp-modal-badge">MagangHub PPK Kemnaker • 2025 – 2026</span>
+            <div class="exp-modal-top-badges">
+              <span class="exp-modal-badge">MagangHub PPK Kemnaker • 2025 – 2026</span>
+              <span class="exp-modal-badge exp-modal-badge-photo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                4 Foto Dokumentasi Lapangan
+              </span>
+            </div>
             <h3 class="exp-modal-title">MagangHub PPK / Probation Officer Assistant</h3>
             <p class="exp-modal-instansi">Balai Pemasyarakatan (BAPAS) Kelas I Padang</p>
             
             <h4 class="exp-modal-section-subtitle">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1 2-2h11"/></svg>
               Rincian Tugas & Tanggung Jawab Lengkap:
             </h4>
             <ul class="exp-modal-list">
@@ -2955,6 +3467,94 @@
                 <span><strong>Co-Coordinator Humas & Onboarding:</strong> Menjadi Co-Coordinator Tim Humas dalam pengembangan konten informasi instansi, serta melakukan serah terima pekerjaan dan pendampingan prosedur kepada pegawai baru.</span>
               </li>
             </ul>
+
+            <!-- DOKUMENTASI KEGIATAN & FOTO LAPANGAN BAPAS -->
+            <div class="bapas-gallery-section">
+              <div class="bapas-gallery-header">
+                <div>
+                  <h4 class="exp-modal-section-subtitle" style="margin-bottom: 4px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    Dokumentasi Kegiatan & Bukti Kerja MagangHub BAPAS
+                  </h4>
+                  <p class="bapas-gallery-subtitle">Klik gambar untuk memperbesar resolusi penuh dan melihat keterangan lengkap:</p>
+                </div>
+                <span class="bapas-gallery-counter-badge">4 Dokumentasi</span>
+              </div>
+
+              <div class="bapas-gallery-grid">
+                <!-- Photo 1 -->
+                <div class="bapas-gallery-item" onclick="openBapasLightbox(0)">
+                  <div class="bapas-item-media">
+                    <img src="assets/bapas/bapas-administrasi-tim.jpg" alt="Administrasi Kepegawaian & Tim Humas BAPAS" loading="lazy">
+                    <div class="bapas-item-hover">
+                      <span class="bapas-zoom-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                        Perbesar Foto
+                      </span>
+                    </div>
+                  </div>
+                  <div class="bapas-item-info">
+                    <span class="bapas-item-pill">Administrasi HR & Humas</span>
+                    <h5 class="bapas-item-title">Pengelolaan Data & Publikasi</h5>
+                    <p class="bapas-item-desc">Input spreadsheet data kepegawaian dinas, monitoring database, dan kolaborasi tim humas publikasi informasi instansi.</p>
+                  </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="bapas-gallery-item" onclick="openBapasLightbox(1)">
+                  <div class="bapas-item-media">
+                    <img src="assets/bapas/bapas-layanan-pemberkasan.jpg" alt="Pelayanan & Registrasi Berkas Klien BAPAS" loading="lazy">
+                    <div class="bapas-item-hover">
+                      <span class="bapas-zoom-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                        Perbesar Foto
+                      </span>
+                    </div>
+                  </div>
+                  <div class="bapas-item-info">
+                    <span class="bapas-item-pill">Layanan Registrasi</span>
+                    <h5 class="bapas-item-title">Penerimaan & Verifikasi Berkas</h5>
+                    <p class="bapas-item-desc">Penerimaan dokumen, verifikasi kelengkapan berkas administratif, dan pelayanan tatap muka klien pemasyarakatan.</p>
+                  </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="bapas-gallery-item" onclick="openBapasLightbox(2)">
+                  <div class="bapas-item-media">
+                    <img src="assets/bapas/bapas-wawancara-litmas.jpg" alt="Wawancara Penelitian Kemasyarakatan (Litmas)" loading="lazy">
+                    <div class="bapas-item-hover">
+                      <span class="bapas-zoom-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                        Perbesar Foto
+                      </span>
+                    </div>
+                  </div>
+                  <div class="bapas-item-info">
+                    <span class="bapas-item-pill">Litmas BAPAS</span>
+                    <h5 class="bapas-item-title">Wawancara Penelitian Kemasyarakatan</h5>
+                    <p class="bapas-item-desc">Wawancara mendalam penggalian data latar belakang klien di ruang konsultasi untuk bahan penyusunan 1–3 laporan Litmas/minggu.</p>
+                  </div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="bapas-gallery-item" onclick="openBapasLightbox(3)">
+                  <div class="bapas-item-media">
+                    <img src="assets/bapas/bapas-penyusunan-surat.png" alt="Penyusunan Surat & Format Kedinasan BAPAS" loading="lazy">
+                    <div class="bapas-item-hover">
+                      <span class="bapas-zoom-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                        Perbesar Foto
+                      </span>
+                    </div>
+                  </div>
+                  <div class="bapas-item-info">
+                    <span class="bapas-item-pill">Administrasi Kedinasan</span>
+                    <h5 class="bapas-item-title">Penyusunan Surat & Berkas Dinas</h5>
+                    <p class="bapas-item-desc">Penyusunan format surat promosi, surat penugasan pegawai, input sistem aplikasi BAPAS, review tata naskah, dan pencetakan dokumen resmi.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div class="exp-modal-tags">
               <span class="exp-tag-pill">Administrasi Kepegawaian (HR)</span>
@@ -3092,6 +3692,34 @@
               <span class="exp-tag-pill">Surat Masuk/Keluar</span>
               <span class="exp-tag-pill">Rekap Absensi Magang</span>
               <span class="exp-tag-pill">Registrasi Klien</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lightbox Modal untuk Dokumentasi BAPAS -->
+        <div class="bapas-lightbox-overlay" id="bapasLightbox" onclick="closeBapasLightbox(event)">
+          <div class="bapas-lightbox-dialog" onclick="event.stopPropagation()">
+            <button class="bapas-lightbox-close" onclick="closeBapasLightbox()" title="Tutup (Esc)">&times;</button>
+            
+            <button class="bapas-lightbox-arrow prev" onclick="prevBapasPhoto()" title="Sebelumnya (Panah Kiri)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="bapas-lightbox-arrow next" onclick="nextBapasPhoto()" title="Selanjutnya (Panah Kanan)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+            <div class="bapas-lightbox-body">
+              <div class="bapas-lightbox-media-wrapper">
+                <img id="bapasLightboxImg" src="assets/bapas/bapas-administrasi-tim.jpg" alt="Dokumentasi BAPAS">
+              </div>
+              <div class="bapas-lightbox-caption-bar">
+                <div class="bapas-lightbox-meta">
+                  <span class="bapas-lightbox-tag" id="bapasLightboxTag">Administrasi HR & Humas</span>
+                  <span class="bapas-lightbox-count" id="bapasLightboxCount">Foto 1 dari 4</span>
+                </div>
+                <h4 class="bapas-lightbox-title" id="bapasLightboxTitle">Pengelolaan Data & Publikasi</h4>
+                <p class="bapas-lightbox-desc" id="bapasLightboxDesc">Input spreadsheet data kepegawaian dinas, monitoring database, dan kolaborasi tim humas publikasi informasi instansi.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -4197,6 +4825,87 @@
       }
     }
 
+    /* ==========================================================================
+       BAPAS LIGHTBOX LOGIC & DATA
+       ========================================================================== */
+    const bapasPhotosData = [
+      {
+        src: 'assets/bapas/bapas-administrasi-tim.jpg',
+        tag: 'Administrasi HR & Tim Humas',
+        title: 'Pengelolaan Data Kepegawaian & Publikasi Kantor BAPAS',
+        desc: 'Aktivitas penginputan spreadsheet rekapitulasi data dinas pegawai, monitoring sistem database internal kepegawaian, serta koordinasi tim publikasi BAPAS Kelas I Padang.'
+      },
+      {
+        src: 'assets/bapas/bapas-layanan-pemberkasan.jpg',
+        tag: 'Pelayanan & Registrasi Berkas Klien',
+        title: 'Verifikasi Berkas & Penerimaan Administratif Klien',
+        desc: 'Pelayanan tatap muka di area registrasi kedinasan, verifikasi kelengkapan berkas fisik, pencocokan data identitas klien pemasyarakatan, serta pengecekan tanda tangan administrasi penerimaan.'
+      },
+      {
+        src: 'assets/bapas/bapas-wawancara-litmas.jpg',
+        tag: 'Penelitian Kemasyarakatan (Litmas)',
+        title: 'Wawancara Penggalian Data Klien di Ruang Konsultasi',
+        desc: 'Pelaksanaan wawancara terstruktur dan observasi mendalam penggalian data latar belakang keluarga, riwayat kasus, dan kondisi psikososial klien sebagai bahan penyusunan 1–3 laporan Litmas per minggu.'
+      },
+      {
+        src: 'assets/bapas/bapas-penyusunan-surat.png',
+        tag: 'Administrasi Kedinasan & Tata Naskah',
+        title: 'Penyusunan Surat Kedinasan, Promosi, & Pencetakan Laporan',
+        desc: 'Penyusunan naskah surat promosi dan surat tugas pegawai sesuai format kedinasan resmi, penyesuaian format tata naskah dinas pada komputer kerja BAPAS, serta pencetakan dokumen kedinasan.'
+      }
+    ];
+
+    let currentBapasPhotoIdx = 0;
+    const bapasLightbox = document.getElementById('bapasLightbox');
+    const bapasLightboxImg = document.getElementById('bapasLightboxImg');
+    const bapasLightboxTag = document.getElementById('bapasLightboxTag');
+    const bapasLightboxCount = document.getElementById('bapasLightboxCount');
+    const bapasLightboxTitle = document.getElementById('bapasLightboxTitle');
+    const bapasLightboxDesc = document.getElementById('bapasLightboxDesc');
+
+    function openBapasLightbox(idx) {
+      currentBapasPhotoIdx = idx;
+      updateBapasLightboxContent();
+      if (bapasLightbox) {
+        bapasLightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeBapasLightbox(e) {
+      if (e && e.target !== bapasLightbox && !e.target.classList.contains('bapas-lightbox-close')) return;
+      if (bapasLightbox) {
+        bapasLightbox.classList.remove('open');
+        const modalExp1 = document.getElementById('modal-exp-1');
+        if (!modalExp1 || !modalExp1.classList.contains('open')) {
+          document.body.style.overflow = '';
+        }
+      }
+    }
+
+    function updateBapasLightboxContent() {
+      const item = bapasPhotosData[currentBapasPhotoIdx];
+      if (!item) return;
+      if (bapasLightboxImg) {
+        bapasLightboxImg.src = item.src;
+        bapasLightboxImg.alt = item.title;
+      }
+      if (bapasLightboxTag) bapasLightboxTag.textContent = item.tag;
+      if (bapasLightboxCount) bapasLightboxCount.textContent = `Foto ${currentBapasPhotoIdx + 1} dari ${bapasPhotosData.length}`;
+      if (bapasLightboxTitle) bapasLightboxTitle.textContent = item.title;
+      if (bapasLightboxDesc) bapasLightboxDesc.textContent = item.desc;
+    }
+
+    function nextBapasPhoto() {
+      currentBapasPhotoIdx = (currentBapasPhotoIdx + 1) % bapasPhotosData.length;
+      updateBapasLightboxContent();
+    }
+
+    function prevBapasPhoto() {
+      currentBapasPhotoIdx = (currentBapasPhotoIdx - 1 + bapasPhotosData.length) % bapasPhotosData.length;
+      updateBapasLightboxContent();
+    }
+
     /* Detail Modal CV ATS */
     const cvAtsModal = document.getElementById('cvAtsModal');
 
@@ -4257,10 +4966,19 @@
       if (e.key === 'Escape') {
         closeContactModal();
         closeCvAtsModal();
+        closeBapasLightbox();
         document.querySelectorAll('.org-detail-modal-overlay.open, .exp-detail-modal-overlay.open, .cv-ats-modal-overlay.open').forEach(m => {
           m.classList.remove('open');
           document.body.style.overflow = '';
         });
+      } else if (e.key === 'ArrowLeft') {
+        if (bapasLightbox && bapasLightbox.classList.contains('open')) {
+          prevBapasPhoto();
+        }
+      } else if (e.key === 'ArrowRight') {
+        if (bapasLightbox && bapasLightbox.classList.contains('open')) {
+          nextBapasPhoto();
+        }
       }
     });
 
