@@ -95,14 +95,14 @@
 
     html {
       scroll-behavior: smooth;
-      font-size: 15px;
+      font-size: 13.5px;
     }
 
     body {
       font-family: var(--font-body);
       background-color: var(--bg-canvas);
       color: var(--text-main);
-      line-height: 1.62;
+      line-height: 1.5;
       overflow-x: hidden;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
@@ -128,48 +128,48 @@
     /* Container */
     .container {
       width: 100%;
-      max-width: 1080px;
+      max-width: 980px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 16px;
     }
 
     /* Section Spacing */
     section {
-      padding: 38px 0;
+      padding: 24px 0;
       position: relative;
     }
 
     .section-header {
       text-align: center;
-      max-width: 680px;
-      margin: 0 auto 24px;
+      max-width: 620px;
+      margin: 0 auto 16px;
     }
 
     .badge-pill {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      padding: 4px 12px;
+      gap: 6px;
+      padding: 3px 10px;
       background: var(--color-primary-soft);
       color: var(--color-primary);
       border-radius: var(--radius-full);
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       border: 1px solid var(--color-primary-tint);
     }
 
     .section-title {
-      font-size: 1.75rem;
-      margin-bottom: 6px;
+      font-size: 1.45rem;
+      margin-bottom: 4px;
       letter-spacing: -0.02em;
     }
 
     .section-subtitle {
-      font-size: 0.9rem;
-      line-height: 1.5;
+      font-size: 0.82rem;
+      line-height: 1.45;
       color: var(--text-muted);
     }
 
@@ -271,39 +271,39 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 62px;
+      height: 52px;
     }
 
     .nav-brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .brand-avatar-badge {
-      width: 36px;
-      height: 36px;
+      width: 30px;
+      height: 30px;
       background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-      border-radius: 10px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
       font-weight: 800;
       font-family: var(--font-display);
-      font-size: 1.05rem;
-      box-shadow: 0 4px 10px rgba(20, 73, 60, 0.25);
+      font-size: 0.9rem;
+      box-shadow: 0 3px 8px rgba(20, 73, 60, 0.25);
     }
 
     .brand-text h1 {
-      font-size: 1.05rem;
+      font-size: 0.92rem;
       font-weight: 700;
       color: var(--text-main);
       line-height: 1.2;
     }
 
     .brand-text span {
-      font-size: 0.72rem;
+      font-size: 0.65rem;
       color: var(--color-primary);
       font-weight: 700;
       letter-spacing: 0.05em;
@@ -314,16 +314,16 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 16px;
       list-style: none;
     }
 
     .nav-link {
-      font-size: 0.9rem;
+      font-size: 0.82rem;
       font-weight: 500;
       color: var(--text-muted);
       position: relative;
-      padding: 6px 0;
+      padding: 4px 0;
     }
 
     .nav-link:hover, .nav-link.active {
@@ -349,12 +349,12 @@
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .theme-toggle-btn {
-      width: 38px;
-      height: 38px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       border: 1px solid var(--border-medium);
       background: var(--bg-surface);
@@ -377,7 +377,7 @@
       border: none;
       color: var(--text-main);
       cursor: pointer;
-      padding: 6px;
+      padding: 5px;
     }
 
     /* ==========================================================================
@@ -385,8 +385,8 @@
        ========================================================================== */
     .hero {
       position: relative;
-      padding-top: 80px;
-      padding-bottom: 34px;
+      padding-top: 68px;
+      padding-bottom: 22px;
       text-align: center;
       background: radial-gradient(circle at 50% 20%, rgba(37, 99, 235, 0.22) 0%, rgba(14, 165, 233, 0.12) 32%, transparent 70%), #0A1120;
       color: #ffffff;
@@ -394,7 +394,7 @@
     }
 
     .hero-container-centered {
-      max-width: 780px;
+      max-width: 720px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -406,9 +406,9 @@
     /* Avatar with Blue Ambient Halo Glow */
     .hero-avatar-wrapper {
       position: relative;
-      width: 110px;
-      height: 110px;
-      margin: 0 auto 12px;
+      width: 86px;
+      height: 86px;
+      margin: 0 auto 8px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -416,10 +416,10 @@
 
     .hero-avatar-glow {
       position: absolute;
-      inset: -10px;
+      inset: -8px;
       border-radius: 50%;
       background: radial-gradient(circle, rgba(56, 189, 248, 0.65) 0%, rgba(37, 99, 235, 0.45) 55%, transparent 80%);
-      filter: blur(14px);
+      filter: blur(12px);
       z-index: 1;
       animation: avatarHaloPulse 3.5s ease-in-out infinite alternate;
     }
@@ -443,33 +443,33 @@
       border-radius: 50%;
       object-fit: cover;
       object-position: center 18%;
-      border: 3px solid rgba(147, 197, 253, 0.45);
-      box-shadow: 0 0 20px rgba(37, 99, 235, 0.45), 0 6px 18px rgba(0, 0, 0, 0.5);
+      border: 2.5px solid rgba(147, 197, 253, 0.45);
+      box-shadow: 0 0 16px rgba(37, 99, 235, 0.45), 0 4px 14px rgba(0, 0, 0, 0.5);
     }
 
     /* Status Pill with Pulsating Green Dot */
     .hero-status-pill {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
+      gap: 6px;
       background: rgba(15, 23, 42, 0.85);
       border: 1px solid rgba(16, 185, 129, 0.4);
-      box-shadow: 0 0 14px rgba(16, 185, 129, 0.15);
-      padding: 4px 14px;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.15);
+      padding: 3px 12px;
       border-radius: 9999px;
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       font-weight: 600;
       color: #f1f5f9;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       backdrop-filter: blur(8px);
     }
 
     .hero-status-dot {
-      width: 7px;
-      height: 7px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: #10B981;
-      box-shadow: 0 0 8px #10b981, 0 0 0 2px rgba(16, 185, 129, 0.25);
+      box-shadow: 0 0 6px #10b981, 0 0 0 2px rgba(16, 185, 129, 0.25);
       animation: statusDotPulse 2s infinite ease-in-out;
     }
 
@@ -480,12 +480,12 @@
 
     /* Main Heading */
     .hero-main-title {
-      font-size: 1.85rem;
+      font-size: 1.5rem;
       font-weight: 800;
       color: #ffffff;
       line-height: 1.25;
       letter-spacing: -0.02em;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .hero-name-glow {
@@ -493,15 +493,15 @@
       background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 50%, #93c5fd 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
+      text-shadow: 0 0 24px rgba(56, 189, 248, 0.25);
     }
 
     /* Dynamic Typewriter Line */
     .hero-typing-line {
-      font-size: 0.98rem;
+      font-size: 0.85rem;
       color: #cbd5e1;
       font-weight: 500;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .typewriter-text {
@@ -525,11 +525,11 @@
 
     /* Bio Summary Text */
     .hero-bio-summary {
-      font-size: 0.88rem;
-      line-height: 1.6;
+      font-size: 0.8rem;
+      line-height: 1.5;
       color: #94a3b8;
-      max-width: 660px;
-      margin: 0 auto 16px;
+      max-width: 580px;
+      margin: 0 auto 12px;
     }
 
     .hero-bio-summary strong {
@@ -547,18 +547,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 6px;
       flex-wrap: wrap;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
 
     .hero-pill-btn {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      padding: 8px 18px;
+      gap: 6px;
+      padding: 6px 14px;
       border-radius: 9999px;
-      font-size: 0.82rem;
+      font-size: 0.76rem;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.25s ease;
@@ -666,21 +666,70 @@
       background: var(--bg-surface);
       border: 1.5px solid var(--border-subtle);
       border-radius: var(--radius-md);
-      padding: 16px 20px;
+      padding: 10px 14px;
       box-shadow: var(--shadow-sm);
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-bottom: 20px;
+      gap: 10px;
+      margin-bottom: 14px;
     }
 
     .role-focus-item {
       display: flex;
       align-items: flex-start;
-      gap: 12px;
+      gap: 10px;
     }
 
     .role-focus-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: var(--color-primary-soft);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .role-focus-item h4 {
+      font-size: 0.86rem;
+      margin-bottom: 2px;
+      color: var(--text-main);
+    }
+
+    .role-focus-item p {
+      font-size: 0.74rem;
+      line-height: 1.35;
+    }
+
+    /* ==========================================================================
+       PENDIDIKAN & PUBLIKASI ILMIAH SINTA 5
+       ========================================================================== */
+    .edu-pub-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .edu-card-full {
+      background: var(--bg-surface);
+      border-radius: 12px;
+      border: 1.5px solid var(--border-subtle);
+      padding: 14px 16px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .edu-header-flex {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .edu-icon-circ {
       width: 38px;
       height: 38px;
       border-radius: 10px;
@@ -692,84 +741,35 @@
       flex-shrink: 0;
     }
 
-    .role-focus-item h4 {
-      font-size: 0.98rem;
-      margin-bottom: 3px;
-      color: var(--text-main);
-    }
-
-    .role-focus-item p {
-      font-size: 0.82rem;
-      line-height: 1.42;
-    }
-
-    /* ==========================================================================
-       PENDIDIKAN & PUBLIKASI ILMIAH SINTA 5
-       ========================================================================== */
-    .edu-pub-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .edu-card-full {
-      background: var(--bg-surface);
-      border-radius: var(--radius-md);
-      border: 1.5px solid var(--border-subtle);
-      padding: 22px 24px;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .edu-header-flex {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 20px;
-    }
-
-    .edu-icon-circ {
-      width: 50px;
-      height: 50px;
-      border-radius: 12px;
-      background: var(--color-primary-soft);
-      color: var(--color-primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
     .publication-badge-box {
       background: linear-gradient(135deg, var(--color-primary-soft), var(--bg-surface));
       border: 1.5px solid var(--color-primary-tint);
-      border-radius: var(--radius-lg);
-      padding: 28px;
+      border-radius: 12px;
+      padding: 14px 16px;
       position: relative;
     }
 
     .sinta-tag {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       background: var(--color-accent);
       color: white;
       font-weight: 700;
-      font-size: 0.76rem;
-      padding: 4px 12px;
+      font-size: 0.7rem;
+      padding: 3px 10px;
       border-radius: var(--radius-full);
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
     .pub-title-link {
-      font-size: 1.18rem;
+      font-size: 0.96rem;
       color: var(--text-main);
       display: block;
-      margin-bottom: 12px;
-      line-height: 1.4;
+      margin-bottom: 8px;
+      line-height: 1.35;
       font-weight: 700;
     }
 
@@ -884,7 +884,7 @@
     }
 
     .exp-card-body {
-      padding: 16px 18px;
+      padding: 12px 14px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
@@ -893,62 +893,62 @@
     .exp-card-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 10px;
+      gap: 4px;
+      margin-bottom: 6px;
     }
 
     .exp-tag-pill {
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      font-size: 0.74rem;
+      font-size: 0.68rem;
       font-weight: 600;
-      padding: 2px 8px;
-      border-radius: 6px;
+      padding: 2px 6px;
+      border-radius: 5px;
       background: var(--color-primary-soft);
       color: var(--color-primary-dark);
     }
 
     .exp-card-title {
-      font-size: 1.05rem;
+      font-size: 0.95rem;
       font-weight: 700;
       color: var(--text-main);
-      margin-bottom: 3px;
-      line-height: 1.32;
+      margin-bottom: 2px;
+      line-height: 1.3;
     }
 
     .exp-card-instansi {
-      font-size: 0.82rem;
+      font-size: 0.76rem;
       color: var(--color-primary);
       font-weight: 600;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
     .exp-task-highlights {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 9px;
-      margin-bottom: 18px;
+      gap: 5px;
+      margin-bottom: 10px;
       flex-grow: 1;
     }
 
     .exp-task-item {
       display: flex;
       align-items: flex-start;
-      gap: 8px;
-      font-size: 0.85rem;
+      gap: 6px;
+      font-size: 0.76rem;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.4;
       background: var(--bg-canvas);
-      padding: 8px 12px;
+      padding: 5px 8px;
       border-radius: var(--radius-sm);
-      border-left: 3px solid var(--color-primary);
+      border-left: 2.5px solid var(--color-primary);
     }
 
     .exp-task-item svg {
       flex-shrink: 0;
-      margin-top: 3px;
+      margin-top: 2px;
       color: var(--color-primary);
     }
 
@@ -963,8 +963,8 @@
       align-items: center;
       justify-content: space-between;
       border-top: 1px solid var(--border-subtle);
-      padding-top: 12px;
-      font-size: 0.84rem;
+      padding-top: 8px;
+      font-size: 0.76rem;
       font-weight: 700;
       color: var(--color-primary);
     }
@@ -2805,8 +2805,8 @@
        ========================================================================== */
     .cert-grid-visual {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
       margin-bottom: 0;
     }
 
@@ -2819,7 +2819,7 @@
     .cert-card-visual {
       background: var(--bg-surface);
       border: 1.5px solid var(--border-subtle);
-      border-radius: 14px;
+      border-radius: 12px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -2829,15 +2829,15 @@
     }
 
     .cert-card-visual:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
       border-color: var(--color-primary);
     }
 
     .cert-thumb-wrapper {
       position: relative;
       width: 100%;
-      height: 140px;
+      height: 125px;
       background: #0f172a;
       overflow: hidden;
       border-bottom: 1px solid var(--border-subtle);
@@ -2875,59 +2875,59 @@
     .cert-zoom-pill {
       background: var(--color-primary, #0284c7);
       color: #ffffff;
-      padding: 8px 16px;
+      padding: 6px 12px;
       border-radius: 9999px;
-      font-size: 0.82rem;
+      font-size: 0.74rem;
       font-weight: 700;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+      gap: 5px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     }
 
     .cert-badge-floating {
       position: absolute;
-      top: 12px;
-      left: 12px;
+      top: 10px;
+      left: 10px;
       background: rgba(15, 23, 42, 0.85);
       backdrop-filter: blur(8px);
       color: #38bdf8;
       border: 1px solid rgba(56, 189, 248, 0.35);
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 6px;
+      padding: 3px 8px;
+      border-radius: 5px;
       letter-spacing: 0.02em;
     }
 
     .cert-card-visual-body {
-      padding: 14px 16px;
+      padding: 10px 12px;
       display: flex;
       flex-direction: column;
       flex: 1;
     }
 
     .cert-issuer-label {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: var(--color-primary);
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
     .cert-title {
-      font-size: 0.94rem;
+      font-size: 0.88rem;
       font-weight: 700;
       color: var(--text-main);
-      line-height: 1.32;
-      margin-bottom: 4px;
+      line-height: 1.3;
+      margin-bottom: 3px;
     }
 
     .cert-role-line {
-      font-size: 0.78rem;
+      font-size: 0.74rem;
       color: var(--text-muted);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       line-height: 1.35;
     }
 
@@ -5982,23 +5982,23 @@
     <!-- ==========================================================================
          KONTAK & INFORMASI REKRUTMEN (DIRECT CHAT & SOSIAL MEDIA)
          ========================================================================== -->
-    <section class="section" id="kontak" style="padding: 48px 0 36px;">
+    <section class="section" id="kontak" style="padding: 24px 0 20px;">
       <div class="container">
-        <div style="text-align: center; max-width: 680px; margin: 0 auto 28px;">
-          <div class="badge-pill" style="margin-bottom: 10px;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <div style="text-align: center; max-width: 620px; margin: 0 auto 16px;">
+          <div class="badge-pill" style="margin-bottom: 8px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
             </svg>
             <span>HUBUNGI SAYA</span>
           </div>
-          <h2 class="section-title" style="font-size: 1.95rem; font-weight: 800; margin-bottom: 8px;">
+          <h2 class="section-title" style="font-size: 1.45rem; font-weight: 800; margin-bottom: 6px;">
             Kontak & Informasi Rekrutmen
           </h2>
-          <div style="width: 50px; height: 3px; background: var(--color-accent); margin: 0 auto 16px; border-radius: 2px;"></div>
-          <p style="color: var(--text-muted); font-size: 1.02rem; line-height: 1.6; margin-bottom: 16px;">
+          <div style="width: 42px; height: 2.5px; background: var(--color-accent); margin: 0 auto 12px; border-radius: 2px;"></div>
+          <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 12px;">
             Saya terbuka untuk wawancara kerja, program magang, maupun penempatan posisi <strong>Human Resources (HR), Administrasi Kepegawaian & Data, Customer Service, Document Controller, atau Asisten Psikolog</strong>.
           </p>
-          <div style="width: 32px; height: 2px; background: var(--color-primary); margin: 0 auto; border-radius: 2px;"></div>
+          <div style="width: 28px; height: 2px; background: var(--color-primary); margin: 0 auto; border-radius: 2px;"></div>
         </div>
 
         <!-- Recruitment Contact Cards Grid -->
