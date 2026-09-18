@@ -2139,17 +2139,18 @@
 
     .cv-ats-modal-box {
       background: var(--bg-surface);
-      border-radius: 20px;
-      width: 100%;
-      max-width: 880px;
-      max-height: 92vh;
+      border-radius: 16px;
+      width: 96%;
+      max-width: 860px;
+      height: 90vh;
+      max-height: 90vh;
       display: flex;
       flex-direction: column;
       border: 1px solid var(--border-subtle);
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
       position: relative;
       overflow: hidden;
-      transform: scale(0.95);
+      transform: scale(0.96);
       transition: transform 0.25s ease;
     }
 
@@ -2161,12 +2162,13 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 16px 24px;
+      padding: 12px 20px;
       background: var(--bg-card);
       border-bottom: 1px solid var(--border-subtle);
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
       z-index: 10;
+      flex-shrink: 0;
     }
 
     .cv-ats-toolbar-info {
@@ -2179,9 +2181,9 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-size: 0.78rem;
+      font-size: 0.74rem;
       font-weight: 700;
-      padding: 4px 12px;
+      padding: 3px 10px;
       border-radius: 9999px;
       background: rgba(16, 185, 129, 0.15);
       color: #059669;
@@ -2191,7 +2193,7 @@
     .cv-ats-toolbar-actions {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .cv-ats-btn-print {
@@ -2200,9 +2202,9 @@
       gap: 6px;
       background: #2563eb;
       color: #ffffff;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      padding: 8px 16px;
+      padding: 7px 14px;
       border-radius: 8px;
       border: none;
       cursor: pointer;
@@ -2221,9 +2223,9 @@
       background: var(--bg-surface);
       color: var(--text-main);
       border: 1px solid var(--border-medium);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      padding: 8px 14px;
+      padding: 7px 12px;
       border-radius: 8px;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -2235,13 +2237,13 @@
     }
 
     .cv-ats-close-btn {
-      width: 36px;
-      height: 36px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       background: var(--bg-canvas);
       border: 1px solid var(--border-medium);
       color: var(--text-main);
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -2256,11 +2258,14 @@
     }
 
     .cv-ats-scroll-wrapper {
-      padding: 28px 20px;
+      flex: 1 1 0;
+      min-height: 0;
       overflow-y: auto;
-      background: #334155;
-      display: flex;
-      justify-content: center;
+      overflow-x: hidden;
+      background: #475569;
+      padding: 24px 16px 36px;
+      display: block;
+      scroll-behavior: smooth;
     }
 
     /* Clean Pure White A4 Document Sheet for ATS Standard */
@@ -2268,47 +2273,60 @@
       background: #ffffff !important;
       color: #1e293b !important;
       width: 100%;
-      max-width: 780px;
-      padding: 44px 48px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 36px 42px 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       border-radius: 4px;
       font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
-      font-size: 13.5px;
-      line-height: 1.55;
+      font-size: 13px;
+      line-height: 1.5;
+      box-sizing: border-box;
+    }
+
+    /* Reset section styles INSIDE cv-ats-sheet so global section padding does not create empty spaces */
+    .cv-ats-sheet section {
+      padding: 0 !important;
+      margin: 0 0 16px 0 !important;
+      position: static !important;
+    }
+
+    .cv-ats-sheet section:last-child {
+      margin-bottom: 0 !important;
     }
 
     /* ATS Header */
     .cv-ats-header {
       text-align: center;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
       border-bottom: 2px solid #0f172a;
     }
 
     .cv-ats-name {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 800;
       color: #0f172a;
       letter-spacing: 0.5px;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
       text-transform: uppercase;
     }
 
     .cv-ats-tagline {
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 700;
       color: #047857;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       letter-spacing: 0.2px;
     }
 
     .cv-ats-contacts {
-      font-size: 12px;
+      font-size: 11.5px;
       color: #475569;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
     }
 
     .cv-ats-contacts a {
@@ -2318,35 +2336,35 @@
 
     /* ATS Section Headings */
     .cv-ats-sec-title {
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 800;
       color: #0f172a;
       text-transform: uppercase;
       letter-spacing: 0.8px;
       border-bottom: 1.5px solid #cbd5e1;
       padding-bottom: 3px;
-      margin-top: 18px;
-      margin-bottom: 10px;
+      margin-top: 0;
+      margin-bottom: 8px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
     .cv-ats-summary-text {
-      font-size: 12.8px;
+      font-size: 12.5px;
       color: #334155;
       text-align: justify;
-      line-height: 1.6;
-      margin-bottom: 12px;
+      line-height: 1.55;
+      margin-bottom: 10px;
     }
 
     /* Experience & Education Item Blocks */
     .cv-ats-entry {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .cv-ats-entry:last-child {
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .cv-ats-entry-header {
@@ -2359,13 +2377,13 @@
     }
 
     .cv-ats-role {
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 700;
       color: #0f172a;
     }
 
     .cv-ats-period {
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 600;
       color: #64748b;
       white-space: nowrap;
@@ -2374,10 +2392,10 @@
     .cv-ats-company-row {
       display: flex;
       justify-content: space-between;
-      font-size: 12.5px;
+      font-size: 12px;
       font-weight: 600;
       color: #047857;
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
 
     .cv-ats-loc {
@@ -2388,14 +2406,14 @@
     .cv-ats-list {
       list-style-type: disc;
       padding-left: 18px;
-      margin: 0 0 8px 0;
+      margin: 0 0 6px 0;
     }
 
     .cv-ats-list li {
-      font-size: 12.5px;
+      font-size: 12px;
       color: #334155;
-      line-height: 1.5;
-      margin-bottom: 4px;
+      line-height: 1.48;
+      margin-bottom: 3px;
     }
 
     .cv-ats-list li strong {
@@ -2404,10 +2422,10 @@
     }
 
     .cv-ats-skill-group {
-      font-size: 12.5px;
+      font-size: 12px;
       color: #334155;
       margin-bottom: 5px;
-      line-height: 1.55;
+      line-height: 1.5;
     }
 
     .cv-ats-skill-group strong {
@@ -2423,9 +2441,9 @@
       transform: translateX(-50%) translateY(100px);
       background: #0f172a;
       color: #ffffff;
-      padding: 12px 24px;
+      padding: 10px 20px;
       border-radius: 9999px;
-      font-size: 0.88rem;
+      font-size: 0.82rem;
       font-weight: 600;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
       z-index: 100000;
@@ -2441,46 +2459,93 @@
       opacity: 1;
     }
 
-    /* Print Stylesheet for ATS */
+    /* Robust Multi-Page Print Stylesheet for ATS */
     @media print {
+      @page {
+        margin: 10mm 12mm;
+        size: A4 portrait;
+      }
+      html, body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        height: auto !important;
+        overflow: visible !important;
+      }
       body * {
         visibility: hidden !important;
       }
-      #cvAtsSheet, #cvAtsSheet * {
+      #cvAtsModal, #cvAtsModal * {
         visibility: visible !important;
-      }
-      #cvAtsSheet {
-        position: absolute !important;
-        left: 0 !important;
-        top: 0 !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 10mm 14mm !important;
-        box-shadow: none !important;
-        border: none !important;
-        background: #ffffff !important;
-        color: #000000 !important;
       }
       .cv-ats-modal-overlay {
         position: static !important;
-        background: transparent !important;
+        display: block !important;
+        background: none !important;
         padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        height: auto !important;
         overflow: visible !important;
       }
       .cv-ats-modal-box {
-        box-shadow: none !important;
+        position: static !important;
+        display: block !important;
+        background: none !important;
         border: none !important;
+        box-shadow: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
         max-height: none !important;
         overflow: visible !important;
+        transform: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
       }
       .cv-ats-toolbar {
         display: none !important;
       }
       .cv-ats-scroll-wrapper {
+        position: static !important;
+        display: block !important;
+        background: none !important;
         padding: 0 !important;
-        background: transparent !important;
+        margin: 0 !important;
+        height: auto !important;
         overflow: visible !important;
+      }
+      .cv-ats-sheet {
+        position: static !important;
+        display: block !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 10.5pt !important;
+        line-height: 1.4 !important;
+      }
+      .cv-ats-sheet section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin-bottom: 10pt !important;
+      }
+      .cv-ats-entry {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin-bottom: 8pt !important;
+      }
+      .cv-ats-sec-title {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
+      .navbar, .floating-wa-btn, .ambient-glow, .cv-copy-toast {
+        display: none !important;
       }
     }
 
