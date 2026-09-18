@@ -2462,90 +2462,207 @@
     /* Robust Multi-Page Print Stylesheet for ATS */
     @media print {
       @page {
-        margin: 10mm 12mm;
+        margin: 10mm 14mm 10mm 14mm;
         size: A4 portrait;
       }
+
+      /* Sembunyikan SEMUA elemen body selain modal CV ATS untuk menghilangkan halaman kosong */
       html, body {
         background: #ffffff !important;
         color: #000000 !important;
-        height: auto !important;
-        overflow: visible !important;
-      }
-      body * {
-        visibility: hidden !important;
-      }
-      #cvAtsModal, #cvAtsModal * {
-        visibility: visible !important;
-      }
-      .cv-ats-modal-overlay {
-        position: static !important;
-        display: block !important;
-        background: none !important;
-        padding: 0 !important;
         margin: 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+        font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif !important;
+      }
+
+      body > *:not(#cvAtsModal):not(script) {
+        display: none !important;
+      }
+
+      /* Tampilkan hanya kontainer CV ATS secara bersih */
+      #cvAtsModal {
+        display: block !important;
+        position: static !important;
         width: 100% !important;
         height: auto !important;
-        overflow: visible !important;
-      }
-      .cv-ats-modal-box {
-        position: static !important;
-        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
         background: none !important;
-        border: none !important;
-        box-shadow: none !important;
+        overflow: visible !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+
+      .cv-ats-modal-box {
+        display: block !important;
+        position: static !important;
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
         max-height: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: none !important;
         overflow: visible !important;
         transform: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
       }
+
+      /* Sembunyikan toolbar tombol saat dicetak */
       .cv-ats-toolbar {
         display: none !important;
       }
+
       .cv-ats-scroll-wrapper {
-        position: static !important;
         display: block !important;
-        background: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
+        position: static !important;
+        width: 100% !important;
         height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: none !important;
         overflow: visible !important;
       }
+
       .cv-ats-sheet {
-        position: static !important;
         display: block !important;
-        background: #ffffff !important;
-        color: #000000 !important;
-        box-shadow: none !important;
-        border: none !important;
-        border-radius: 0 !important;
+        position: static !important;
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
-        padding: 0 !important;
         margin: 0 !important;
-        font-size: 10.5pt !important;
+        padding: 0 !important;
+        background: #ffffff !important;
+        color: #0f172a !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        font-size: 9.5pt !important;
         line-height: 1.4 !important;
       }
-      .cv-ats-sheet section {
-        page-break-inside: avoid;
-        break-inside: avoid;
+
+      .cv-ats-header {
         margin-bottom: 10pt !important;
+        padding-bottom: 5pt !important;
+        border-bottom: 1.5pt solid #0f172a !important;
+        text-align: center !important;
       }
-      .cv-ats-entry {
-        page-break-inside: avoid;
-        break-inside: avoid;
-        margin-bottom: 8pt !important;
+
+      .cv-ats-name {
+        font-size: 15pt !important;
+        font-weight: 800 !important;
+        color: #0f172a !important;
+        letter-spacing: 0.5px !important;
+        margin-bottom: 2pt !important;
       }
+
+      .cv-ats-tagline {
+        font-size: 9pt !important;
+        font-weight: 700 !important;
+        color: #047857 !important;
+        margin-bottom: 3pt !important;
+      }
+
+      .cv-ats-contacts {
+        font-size: 8.2pt !important;
+        color: #334155 !important;
+        gap: 6pt !important;
+      }
+
+      .cv-ats-contacts a {
+        color: #334155 !important;
+        text-decoration: none !important;
+      }
+
       .cv-ats-sec-title {
-        page-break-after: avoid;
-        break-after: avoid;
+        font-size: 9.8pt !important;
+        font-weight: 800 !important;
+        color: #0f172a !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.6px !important;
+        border-bottom: 1pt solid #cbd5e1 !important;
+        padding-bottom: 2pt !important;
+        margin-top: 9pt !important;
+        margin-bottom: 5pt !important;
+        page-break-after: avoid !important;
+        break-after: avoid !important;
       }
-      .navbar, .floating-wa-btn, .ambient-glow, .cv-copy-toast {
-        display: none !important;
+
+      .cv-ats-summary-text {
+        font-size: 8.8pt !important;
+        line-height: 1.42 !important;
+        margin-bottom: 6pt !important;
+        color: #1e293b !important;
+        text-align: justify !important;
+      }
+
+      .cv-ats-skill-group {
+        font-size: 8.8pt !important;
+        line-height: 1.38 !important;
+        margin-bottom: 3.5pt !important;
+        color: #1e293b !important;
+      }
+
+      .cv-ats-entry {
+        margin-bottom: 7pt !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      .cv-ats-entry-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: baseline !important;
+        margin-bottom: 1pt !important;
+      }
+
+      .cv-ats-role {
+        font-size: 9.2pt !important;
+        font-weight: 700 !important;
+        color: #0f172a !important;
+      }
+
+      .cv-ats-period {
+        font-size: 8.2pt !important;
+        font-weight: 600 !important;
+        color: #475569 !important;
+      }
+
+      .cv-ats-company-row {
+        display: flex !important;
+        justify-content: space-between !important;
+        font-size: 8.8pt !important;
+        font-weight: 600 !important;
+        color: #047857 !important;
+        margin-bottom: 2.5pt !important;
+      }
+
+      .cv-ats-loc {
+        color: #475569 !important;
+        font-weight: 500 !important;
+      }
+
+      .cv-ats-list {
+        padding-left: 13pt !important;
+        margin: 0 0 3pt 0 !important;
+      }
+
+      .cv-ats-list li {
+        font-size: 8.6pt !important;
+        line-height: 1.35 !important;
+        margin-bottom: 1.5pt !important;
+        color: #1e293b !important;
+      }
+
+      .cv-ats-sheet section {
+        margin-bottom: 8pt !important;
+        padding: 0 !important;
+        page-break-inside: auto !important;
+        break-inside: auto !important;
       }
     }
 
