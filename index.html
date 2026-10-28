@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iffah Afiifah Sumayyah Ataana, S.Psi. | HR, Administrasi & Client Support</title>
-  <meta name="description" content="Portofolio profesional Iffah Afiifah Sumayyah Ataana, S.Psi. - Lulusan S1 Psikologi Universitas Negeri Padang (IPK 3.51) dengan keahlian utama di bidang Human Resources (HR), Administrasi Kepegawaian & Data, Customer Service, publikasi SINTA 5, dan BAPAS.">
-  <meta name="keywords" content="Iffah Afiifah Sumayyah Ataana, S.Psi, HR Support, Administrasi Kepegawaian, Human Resources, Administration Support, Customer Service, BAPAS, LP2R, SINTA 5, Psikologi UNP, Padang">
+  <title>Iffah Afiifah Sumayyah Ataana, S.Psi. | Human Resources & People Development</title>
+  <meta name="description" content="Portofolio profesional Iffah Afiifah Sumayyah Ataana, S.Psi. - Lulusan S1 Psikologi Universitas Negeri Padang (IPK 3.51) dengan fokus utama di bidang Human Resources (HR Generalist / Staff HR), Rekrutmen, People Development, dan Administrasi Kepegawaian.">
+  <meta name="keywords" content="Iffah Afiifah Sumayyah Ataana, S.Psi, HR Generalist, Staff HR, Human Resources, Recruitment, People Development, Administrasi Kepegawaian, Asesmen SDM, Psikologi UNP, Padang">
   <meta name="author" content="Iffah Afiifah Sumayyah Ataana">
 
   <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
@@ -2986,6 +2986,248 @@
     /* ==========================================================================
        PELATIHAN & SERTIFIKASI
        ========================================================================== */
+    /* Featured HR Generalist Training Card */
+    .hrg-training-card {
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 18px;
+      padding: 24px 28px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      margin-bottom: 28px;
+      position: relative;
+      transition: all 0.28s ease;
+    }
+
+    .hrg-training-card:hover {
+      border-color: var(--color-primary);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.07);
+    }
+
+    .hrg-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+    }
+
+    .hrg-badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .hrg-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.12);
+      color: #059669;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .hrg-status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #10b981;
+      animation: pulseGlow 1.8s infinite;
+    }
+
+    .hrg-issuer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--color-primary-soft);
+      color: var(--color-primary);
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+    }
+
+    .hrg-title {
+      font-size: 1.25rem;
+      font-family: var(--font-display);
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+
+    .hrg-meta-line {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hrg-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .hrg-grid-content {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .hrg-col-title {
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hrg-sessions-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .hrg-session-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 0.84rem;
+      color: var(--text-main);
+      transition: all 0.2s ease;
+      line-height: 1.4;
+    }
+
+    .hrg-session-item:hover {
+      background: var(--bg-surface);
+      border-color: var(--color-primary-light);
+      transform: translateX(3px);
+    }
+
+    .hrg-session-num {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: var(--color-primary);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .hrg-outputs-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hrg-output-box {
+      background: var(--bg-alt);
+      border: 1px solid var(--border-subtle);
+      border-left: 3.5px solid var(--color-primary);
+      border-radius: 8px;
+      padding: 12px 14px;
+      transition: all 0.2s ease;
+    }
+
+    .hrg-output-box:hover {
+      background: var(--bg-surface);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      transform: translateY(-2px);
+    }
+
+    .hrg-output-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .hrg-output-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    .hrg-tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border-subtle);
+    }
+
+    .hrg-tag {
+      font-size: 0.72rem;
+      background: var(--color-primary-soft);
+      color: var(--color-primary-dark);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .cert-sub-heading-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .cert-sub-heading-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    @media (max-width: 900px) {
+      .hrg-grid-content {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .hrg-training-card {
+        padding: 18px 16px;
+      }
+      .hrg-title {
+        font-size: 1.1rem;
+      }
+    }
+
     .cert-grid-visual {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -3834,7 +4076,7 @@
         <!-- Status Pill with Pulsating Green Dot -->
         <div class="hero-status-pill">
           <span class="hero-status-dot"></span>
-          <span>Siap Bekerja Segera • HR, Administrasi atau Client Support</span>
+          <span>Siap Bekerja Segera • HR Generalist, Rekrutmen & People Development</span>
         </div>
 
         <!-- Main Heading -->
@@ -3844,12 +4086,12 @@
 
         <!-- Dynamic Typewriter Subtitle -->
         <div class="hero-typing-line">
-          Saya seorang <span id="typewriterText" class="typewriter-text">Human Resources Support</span><span class="typewriter-cursor">|</span>
+          Saya seorang <span id="typewriterText" class="typewriter-text">HR Generalist</span><span class="typewriter-cursor">|</span>
         </div>
 
         <!-- Bio Summary Paragraph -->
         <p class="hero-bio-summary">
-          Lulusan <strong>S1 Psikologi Universitas Negeri Padang (IPK 3.51)</strong> dengan pengalaman dalam <strong>administrasi kepegawaian (HR), pengelolaan data, dan pelayanan klien (customer service)</strong>. Terbiasa mengelola arsip dokumen, <em>data entry</em>, serta koordinasi persuratan secara teliti dan profesional.
+          Lulusan <strong>S1 Psikologi Universitas Negeri Padang (IPK 3.51)</strong> dengan fokus kompetensi di bidang <strong>Human Resources (HR Generalist / Staff HR), Rekrutmen & Seleksi, serta People Development</strong>. Terbiasa mengelola administrasi kepegawaian, asesmen psikologi & SDM, serta operasional HR secara terstruktur, teliti, dan profesional.
         </p>
 
         <!-- Action Buttons (WhatsApp, Portfolio, Ringkasan CV) -->
@@ -3969,8 +4211,8 @@
               </svg>
             </div>
             <div>
-              <h4>Customer Service & Humas</h4>
-              <p>Penerimaan tamu dinas, pendampingan keluarga klien, Koordinator Humas Psygames, dan komunikasi interpersonal ramah.</p>
+              <h4>People & Talent Development</h4>
+              <p>Analisis kebutuhan pelatihan (TNA), orientasi pegawai baru, pembinaan hubungan kerja (employee relations), serta komunikasi interpersonal profesional.</p>
             </div>
           </div>
         </div>
@@ -5760,14 +6002,14 @@
       <div class="container">
         <div class="section-header">
           <span class="badge-pill">Keahlian & Penguasaan Tools</span>
-          <h2 class="section-title">Matriks Keahlian HR, Administrasi & Excel</h2>
+          <h2 class="section-title">Matriks Keahlian HR, People Development & Excel</h2>
           <p class="section-subtitle">
-            Penguasaan mendalam dalam administrasi kepegawaian, pengolahan spreadsheet data tingkat lanjut, dan komunikasi customer service.
+            Penguasaan mendalam dalam manajemen SDM (HR Generalist), rekrutmen & seleksi, people development, administrasi kepegawaian, serta pengolahan spreadsheet data tingkat lanjut.
           </p>
         </div>
 
         <div class="skills-horizontal-card">
-          <!-- Row 1: Excel Advanced -->
+          <!-- Row 1: Excel for HR & Analytics -->
           <div class="skill-row">
             <div class="skill-row-label">
               <div class="skill-row-icon excel">
@@ -5779,24 +6021,28 @@
                   <line x1="15" y1="3" x2="15" y2="21"></line>
                 </svg>
               </div>
-              <span>Excel Advanced:</span>
+              <span>Excel for HR & Analytics:</span>
             </div>
             <div class="skill-row-pills">
               <span class="skill-chip">
                 <svg class="chip-ic-excel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-                Pivot Table
+                Pivot Table HR Data
               </span>
               <span class="skill-chip">
                 <svg class="chip-ic-excel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 VLOOKUP & HLOOKUP
               </span>
               <span class="skill-chip">
+                <svg class="chip-ic-excel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Formula Absence Rate & Payroll
+              </span>
+              <span class="skill-chip">
                 <svg class="chip-ic-excel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
-                Sorting & Filtering
+                Sorting & Filtering Data
               </span>
               <span class="skill-chip">
                 <svg class="chip-ic-excel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                Formula Logika (IF)
+                Formula Logika (IF, Nested IF)
               </span>
               <span class="skill-chip">
                 <svg class="chip-ic-excel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>
@@ -5804,16 +6050,20 @@
               </span>
               <span class="skill-chip">
                 <svg class="chip-ic-excel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                Data Validation
+                Data Validation & Proteksi
               </span>
               <span class="skill-chip">
                 <svg class="chip-ic-excel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 10 10 0 0 0 0-20"/></svg>
                 Conditional Formatting
               </span>
+              <span class="skill-chip">
+                <svg class="chip-ic-excel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                People Analytics & Metrik SDM
+              </span>
             </div>
           </div>
 
-          <!-- Row 2: HR & Kepegawaian -->
+          <!-- Row 2: HR Generalist & Regulasi -->
           <div class="skill-row">
             <div class="skill-row-label">
               <div class="skill-row-icon hr">
@@ -5824,77 +6074,92 @@
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
               </div>
-              <span>HR & Kepegawaian:</span>
+              <span>HR Generalist & Regulasi:</span>
             </div>
             <div class="skill-row-pills">
+              <span class="skill-chip">
+                <svg class="chip-ic-hr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                Penyusunan Job Description
+              </span>
+              <span class="skill-chip">
+                <svg class="chip-ic-hr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                Key Performance Indicators (KPI - SMART)
+              </span>
+              <span class="skill-chip">
+                <svg class="chip-ic-hr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                Performance Appraisal / Evaluasi Kinerja
+              </span>
+              <span class="skill-chip">
+                <svg class="chip-ic-hr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Labor Law / UU Ketenagakerjaan
+              </span>
+              <span class="skill-chip">
+                <svg class="chip-ic-hr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                Perjanjian Kerja (PKWT & PKWTT)
+              </span>
               <span class="skill-chip">
                 <svg class="chip-ic-hr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
                 Administrasi Kepegawaian
               </span>
               <span class="skill-chip">
                 <svg class="chip-ic-hr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
-                Surat Tugas & Promosi
+                Surat Tugas & Promosi Pegawai
               </span>
               <span class="skill-chip">
                 <svg class="chip-ic-hr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                Pengelolaan Jadwal Dinas
-              </span>
-              <span class="skill-chip">
-                <svg class="chip-ic-hr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-                Rekap Absensi Karyawan
-              </span>
-              <span class="skill-chip">
-                <svg class="chip-ic-hr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-                Administrasi Asesmen Psikotes
-              </span>
-              <span class="skill-chip">
-                <svg class="chip-ic-hr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
-                Onboarding Pegawai Baru
-              </span>
-              <span class="skill-chip">
-                <svg class="chip-ic-hr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-                Penilaian Kinerja SDM
+                Jadwal Dinas & Rekap Presensi
               </span>
             </div>
           </div>
 
-          <!-- Row 3: Administrasi & Pelayanan -->
+          <!-- Row 3: Recruitment & People Development -->
           <div class="skill-row">
             <div class="skill-row-label">
               <div class="skill-row-icon admin">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <polyline points="16 11 18 13 22 9"></polyline>
                 </svg>
               </div>
-              <span>Administrasi & Layanan:</span>
+              <span>Recruitment & People Dev:</span>
             </div>
             <div class="skill-row-pills">
               <span class="skill-chip">
-                <svg class="chip-ic-admin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-                Customer Service Support
+                <svg class="chip-ic-admin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                End-to-End Talent Sourcing
+              </span>
+              <span class="skill-chip">
+                <svg class="chip-ic-admin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                Resume Screening & Shortlisting
+              </span>
+              <span class="skill-chip">
+                <svg class="chip-ic-admin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Wawancara Berbasis Kompetensi
+              </span>
+              <span class="skill-chip">
+                <svg class="chip-ic-admin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                Administrasi & Skoring Psikotes
+              </span>
+              <span class="skill-chip">
+                <svg class="chip-ic-admin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                Training Needs Analysis (TNA)
+              </span>
+              <span class="skill-chip">
+                <svg class="chip-ic-admin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Program Onboarding & Orientasi
+              </span>
+              <span class="skill-chip">
+                <svg class="chip-ic-admin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Employee Relations & Engagement
               </span>
               <span class="skill-chip">
                 <svg class="chip-ic-admin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-                Pengarsipan Sistematis
-              </span>
-              <span class="skill-chip">
-                <svg class="chip-ic-admin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                Surat Masuk & Keluar Dinas
-              </span>
-              <span class="skill-chip">
-                <svg class="chip-ic-admin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
-                Pelayanan Tamu & Informasi
-              </span>
-              <span class="skill-chip">
-                <svg class="chip-ic-admin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                Penyusunan Laporan Litmas
+                Pengarsipan Berkas Personalia
               </span>
               <span class="skill-chip">
                 <svg class="chip-ic-admin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                Kerahasiaan Berkas Klien
+                Etika Kerahasiaan Data SDM
               </span>
             </div>
           </div>
@@ -6021,7 +6286,140 @@
           </p>
         </div>
 
-        <!-- 4 Visual Certificates with High-Res Photos & Lightbox -->
+        <!-- SUB-BAGIAN 1: PELATIHAN INTENSIF HR GENERALIST (MSDM) -->
+        <div class="hrg-training-card">
+          <div class="hrg-card-header">
+            <div>
+              <div class="hrg-badge-wrap">
+                <span class="hrg-status-badge">
+                  <span class="hrg-status-dot"></span>
+                  Selesai Pelatihan Intensif
+                </span>
+                <span class="hrg-issuer-badge">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  Manajemen SDM (MSDM)
+                </span>
+              </div>
+              <h3 class="hrg-title">Pelatihan Intensif HR Generalist (7 Sesi Komprehensif)</h3>
+              <div class="hrg-meta-line">
+                <span class="hrg-meta-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Durasi: 3 Hari Pelatihan Intensif
+                </span>
+                <span>•</span>
+                <span class="hrg-meta-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  7 Sesi Materi Lengkap
+                </span>
+                <span>•</span>
+                <span class="hrg-meta-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  Output Portofolio Praktikal Aplikatif
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hrg-grid-content">
+            <!-- Kolom 1: 7 Sesi Pembelajaran -->
+            <div>
+              <h4 class="hrg-col-title">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                Kurikulum Materi (7 Sesi Pembelajaran):
+              </h4>
+              <ul class="hrg-sessions-list">
+                <li class="hrg-session-item">
+                  <span class="hrg-session-num">1</span>
+                  <div><strong>Intro HR Management</strong> — Fondasi pengelolaan sumber daya manusia strategis & peran fungsional HR di organisasi.</div>
+                </li>
+                <li class="hrg-session-item">
+                  <span class="hrg-session-num">2</span>
+                  <div><strong>HR Administration</strong> — Tata kelola administrasi kepegawaian, database karyawan, persuratan dinas, dan pengarsipan.</div>
+                </li>
+                <li class="hrg-session-item">
+                  <span class="hrg-session-num">3</span>
+                  <div><strong>Recruitment Process</strong> — Siklus rekrutmen end-to-end, talent sourcing, resume screening, teknik wawancara, & seleksi.</div>
+                </li>
+                <li class="hrg-session-item">
+                  <span class="hrg-session-num">4</span>
+                  <div><strong>Labor Law: UU Ketenagakerjaan</strong> — Pemahaman regulasi ketenagakerjaan, hak & kewajiban karyawan, perjanjian kerja (PKWT/PKWTT).</div>
+                </li>
+                <li class="hrg-session-item">
+                  <span class="hrg-session-num">5</span>
+                  <div><strong>Performance Management</strong> — Sistem appraisal, perumusan target kerja, evaluasi kinerja terukur, dan tindak lanjut performa.</div>
+                </li>
+                <li class="hrg-session-item">
+                  <span class="hrg-session-num">6</span>
+                  <div><strong>People Development</strong> — Analisis kebutuhan pelatihan (TNA), orientasi pegawai baru, serta strategi pengembangan potensi SDM.</div>
+                </li>
+                <li class="hrg-session-item">
+                  <span class="hrg-session-num">7</span>
+                  <div><strong>People Analytics</strong> — Pemanfaatan metrik data SDM, rekapitulasi data ketidakhadiran, & insight keputusan manajemen.</div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Kolom 2: Output Tugas & Portofolio Praktikal -->
+            <div>
+              <h4 class="hrg-col-title">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                Output Portofolio & Capstone Project:
+              </h4>
+              <div class="hrg-outputs-grid">
+                <div class="hrg-output-box">
+                  <div class="hrg-output-head">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                    <span>1. Penyusunan Jobdesk Pegawai (Job Description)</span>
+                  </div>
+                  <p class="hrg-output-desc">
+                    Menyusun deskripsi peran jabatan secara terstruktur dan kompetensi-based, mencakup ringkasan tugas pokok, indikator tanggung jawab utama, hierarki wewenang, serta kualifikasi jabatan.
+                  </p>
+                </div>
+
+                <div class="hrg-output-box">
+                  <div class="hrg-output-head">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                    <span>2. Perancangan Key Performance Indicators (KPI)</span>
+                  </div>
+                  <p class="hrg-output-desc">
+                    Merumuskan indikator performa kerja karyawan berbasis prinsip SMART (Specific, Measurable, Achievable, Relevant, Time-bound), pembobotan target, dan form evaluasi kinerja berkala.
+                  </p>
+                </div>
+
+                <div class="hrg-output-box">
+                  <div class="hrg-output-head">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>3. Rekap Absen & Absence Rate untuk Payroll</span>
+                  </div>
+                  <p class="hrg-output-desc">
+                    Mengolah rekapitulasi presensi karyawan, menghitung persentase tingkat ketidakhadiran (absence rate) dengan formula akurat, serta memvalidasi data absensi terintegrasi untuk kalkulasi payroll/penggajian.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Competency Tags -->
+              <div class="hrg-tags-row">
+                <span class="hrg-tag">#HRGeneralist</span>
+                <span class="hrg-tag">#JobDescription</span>
+                <span class="hrg-tag">#KPI_SMART</span>
+                <span class="hrg-tag">#AbsenceRate</span>
+                <span class="hrg-tag">#PayrollReady</span>
+                <span class="hrg-tag">#UUKetenagakerjaan</span>
+                <span class="hrg-tag">#PeopleAnalytics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUB-BAGIAN 2: DOKUMEN SERTIFIKAT VISUAL -->
+        <div class="cert-sub-heading-row">
+          <div class="cert-sub-heading-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span>Dokumen Sertifikat Kedinasan & Kredensial Resmi</span>
+          </div>
+        </div>
+
+        <!-- 6 Visual Certificates with High-Res Photos & Lightbox -->
         <div class="cert-grid-visual">
           <!-- Foto 1: Sertifikat MagangHub Web Kemnaker (Sangat Baik) -->
           <div class="cert-card-visual" onclick="openCertLightbox(0)">
@@ -6205,7 +6603,7 @@
           </h2>
           <div style="width: 42px; height: 2.5px; background: var(--color-accent); margin: 0 auto 12px; border-radius: 2px;"></div>
           <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 12px;">
-            Saya terbuka untuk wawancara kerja, program magang, maupun penempatan posisi <strong>Human Resources (HR), Administrasi Kepegawaian & Data, Customer Service, Document Controller, atau Asisten Psikolog</strong>.
+            Saya terbuka untuk wawancara kerja, program pemagangan, maupun penempatan posisi <strong>Human Resources (HR Generalist / Staff HR), Rekrutmen & Talent Acquisition, People Development, atau Administrasi Kepegawaian & Data</strong>.
           </p>
           <div style="width: 28px; height: 2px; background: var(--color-primary); margin: 0 auto; border-radius: 2px;"></div>
         </div>
@@ -6389,7 +6787,7 @@
           <!-- ATS Header -->
           <header class="cv-ats-header">
             <h1 class="cv-ats-name">IFFAH AFIIFAH SUMAYYAH ATAANA, S.Psi.</h1>
-            <div class="cv-ats-tagline">Human Resources Support • Administrasi Kepegawaian & Data • Customer Service</div>
+            <div class="cv-ats-tagline">Human Resources (HR Generalist / Staff HR) • People Development • Administrasi Kepegawaian</div>
             <div class="cv-ats-contacts">
               <span>Padang, Sumatera Barat, Indonesia</span>
               <span>•</span>
@@ -6405,7 +6803,7 @@
           <section>
             <h2 class="cv-ats-sec-title">Ringkasan Profesional</h2>
             <p class="cv-ats-summary-text">
-              Lulusan S1 Psikologi Universitas Negeri Padang (IPK 3.51) dengan pengalaman dalam administrasi kepegawaian (HR), pengelolaan data dan dokumen, pelayanan informasi (customer service), serta asesmen psikologi. Terbiasa mengelola persuratan kedinasan, rekapitulasi data menggunakan Microsoft Excel (Pivot Table, VLOOKUP/HLOOKUP), penyusunan laporan, serta komunikasi lintas pihak dengan ketelitian tinggi dan integritas kerahasiaan data.
+              Lulusan S1 Psikologi Universitas Negeri Padang (IPK 3.51) dengan kompetensi terverifikasi di bidang Human Resources (HR Generalist / Staff HR), Rekrutmen, People Development, dan Administrasi Kepegawaian. Terbiasa dalam penyusunan Job Description (Jobdesk), perancangan Key Performance Indicators (KPI), pengolahan data absensi & kalkulasi absence rate untuk payroll, manajemen persuratan dinas, serta analisis database menggunakan Microsoft Excel (Pivot Table, VLOOKUP/HLOOKUP) dengan ketelitian tinggi dan integritas data.
             </p>
           </section>
 
@@ -6413,7 +6811,7 @@
           <section>
             <h2 class="cv-ats-sec-title">Keahlian Utama</h2>
             <div class="cv-ats-skill-group">
-              <strong>Administrasi & HR:</strong> Administrasi Kepegawaian, Rekapitulasi Absensi, Penjadwalan Tugas & Dinas, Pengelolaan Surat Masuk/Keluar, Data Entry & Validasi Database, Pengarsipan Dokumen Sistematis, Customer Service, Administrasi & Skoring Tes Psikologi.
+              <strong>Administrasi & HR:</strong> Administrasi Kepegawaian, Penyusunan Job Description (Jobdesk), Perancangan KPI (SMART), Rekap Absensi & Absence Rate Payroll, UU Ketenagakerjaan (Labor Law), People Development, People Analytics, End-to-end Recruitment & Sourcing, Penjadwalan Tugas & Dinas, Pengelolaan Surat Masuk/Keluar, Data Entry & Validasi Database, Pengarsipan Dokumen Sistematis, Administrasi & Skoring Tes Psikologi.
             </div>
             <div class="cv-ats-skill-group">
               <strong>Software & Digital Tools:</strong> Microsoft Excel (Pivot Table, VLOOKUP, HLOOKUP, Data Validation), Microsoft Word, PowerPoint, Google Workspace (Docs, Sheets, Drive), Canva, SPSS.
@@ -6576,6 +6974,7 @@
           <section>
             <h2 class="cv-ats-sec-title">Sertifikasi & Pelatihan</h2>
             <ul class="cv-ats-list">
+              <li><strong>Pelatihan Intensif HR Generalist — Manajemen SDM (MSDM):</strong> Program intensif 3 hari (7 sesi: Intro HR Management, HR Administration, Recruitment Process, Labor Law / UU Ketenagakerjaan, Performance Management, People Development, & People Analytics). Output Capstone Portofolio: Penyusunan Jobdesk Pegawai, Key Performance Indicators (KPI), dan Analisis Absence Rate (Rekapitulasi Absensi) untuk Kalkulasi Payroll.</li>
               <li><strong>Sertifikat MagangHub Kemnaker RI:</strong> Program Pemagangan Nasional Balai Pemasyarakatan Kelas I Padang — Predikat: <em>Sangat Baik</em> (No: MN.013.011349.02.2025).</li>
               <li><strong>Sertifikat Magang Instansi BAPAS Kelas I Padang:</strong> Pembantu Pembimbing Kemasyarakatan (No: WP.3.PAS.3-SM.06.02-26).</li>
               <li><strong>Sertifikat Humas "Content Creator" BAPAS:</strong> Pengembangan Konten Media & Publikasi Kedinasan (No: WP.3.PAS.3-SM.6.3.39).</li>
@@ -7238,10 +7637,11 @@
     /* Dynamic Typewriter Effect for Hero */
     const typewriterElement = document.getElementById('typewriterText');
     const rolesList = [
-      'Human Resources (HR) Support',
-      'Administrasi Kepegawaian & Data',
-      'Customer Service & Layanan Klien',
-      'Asisten Psikolog & Asesmen SDM'
+      'HR Generalist',
+      'Staff Human Resources (HR)',
+      'Recruitment & Talent Acquisition',
+      'People Development Specialist',
+      'HR Operations & Administrasi Kepegawaian'
     ];
     let roleIndex = 0;
     let charIndex = 0;
